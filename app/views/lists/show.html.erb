@@ -1,0 +1,20 @@
+ <h1 class="text-center mt-5"><%= @list.name%> </h1>
+  <% if @list.movies.empty? %>
+    <%= "Sorry, you don't have any film in this list yet" %>
+  <% else %>
+    <% @list.bookmarks.each do |bookmark| %>
+    <%= bookmark.movie.title %>
+    <%= bookmark.movie.overview %>
+    <%= bookmark.movie.rating %>
+    <%= bookmark.movie.title %>
+    <%= bookmark.movie.poster_url%>
+    <%= bookmark.comment %>
+    <%= link_to "Supprimer",
+    bookmark_path(bookmark),
+    data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    } %>
+
+    <% end %>
+<% end %>
