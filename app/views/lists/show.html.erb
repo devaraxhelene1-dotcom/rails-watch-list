@@ -7,13 +7,13 @@
   <% else %>
 
 
-  
+
     <% @list.bookmarks.each do |bookmark| %>
     <%= bookmark.movie.title %>
     <%= bookmark.movie.overview %>
     <%= bookmark.movie.rating %>
     <%= bookmark.movie.title %>
-<%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title, width: 200 %>    <%= bookmark.comment %>
+    <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title, width: 200 %>    <%= bookmark.comment %>
     <%= link_to "Supprimer",
     bookmark_path(bookmark),
     data: {
