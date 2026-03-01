@@ -1,0 +1,26 @@
+.btn-custom {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 7px;
+}
+
+.btn-custom:hover {
+  background-color: rgb(147, 0, 0);
+  color: white;
+}
+
+.button-custom-delete {
+  border: solid;
+  color: rgb(147, 0, 0);
+  border-radius: 7px;
+  border-color: rgb(147, 0, 0);
+}
+
+.button-custom-delete:hover {
+  border: solid;
+  color: white;
+  background-color:  rgb(147, 0, 0);
+  border-radius: 7px;
+  border-color: rgb(147, 0, 0);
+}

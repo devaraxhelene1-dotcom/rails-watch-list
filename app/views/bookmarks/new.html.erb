@@ -1,7 +1,16 @@
-<h1>Add a movie to <%= @list.name %></h1>
+<h1 class="mb-4 text-center pt-5">Add a movie to <%= @list.name %></h1>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
+<div class="container mt-4">
+  <div class="col-md-6 mx-auto">
+    <div class="card shadow-sm p-4">
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+    <div class="mb-3">
   <%= f.association :movie%>
   <%= f.input :comment %>
-  <%= f.button :submit %>
+    </div>
+    <div class="text-center">
+  <%= f.button :submit, class: "btn btn-custom px-5 py-3" %>
+    </div>
 <% end %>
+    </div>
+  </div>
